@@ -30,3 +30,20 @@ body{
     border-radius: 8px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
+input,
+button{
+    height: 50px;
+    background-color: #ffffff;
+    color: #080808;
+    font-weight: 500;
+    border-radius: 5px;
+}
+input{
+    width: 60%;
+    font-size: 14px;
+    padding: 0 20px;
+}
+button{
+    width: 30%;
+    float: right;
+}
