@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0a6cf1;
+}
+.container{
+    width: 40%;
+    min-width: 450px;
+    border:  1px solid #000;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 50px 30px;
+}
