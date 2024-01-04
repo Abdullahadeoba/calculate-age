@@ -5,8 +5,7 @@ function ageCalculate() {
     let inputDate = new Date(document.getElementById("date").value)
 
     let birthMonth,birthDate,birthYear; 
-
-    let birthDetails = {
+ let birthDetails = {
         date:inputDate.getDate(),
         month:inputDate.getMonth()+1,
         year:inputDate.getFullYear()
@@ -27,9 +26,40 @@ function ageCalculate() {
        
     ){
         alert("Not Born yet");
+        displayResult("-","-","-");
         return;
     }
+    birthYear = currentYear - birthDetails.year;
 
+    if(currentMonth >= birthDetails.month){
+        birthMonth = currentMonth - birthDetails.month;
+    }
+    else{
+        birthYear--;
+        birthMonth = 12 + currentMonth - birthDetails.month;
+    }
+
+    if(currentDate >= birthDetails.date){
+        birthDate = currentDate - birthDetails.date;
+    }
+    else{
+        birthMonth--;
+        let days = month[currentMonth -2];
+        birthDate = days + currentDate - birthDetails.date;
+
+        if(birthMonth < 0){
+            birthMonth = 11;
+            birthYear--;
+        }
+    }
+
+    displayResult(birthDate,birthMonth,birthYear);
+
+}
+function displayResult(bDate, bMonth, bYear){
+    document.getElementById("years").textContent = bYear;
+    document.getElementById("months").textContent = bMonth;
+    document.getElementById("days").textContent = bDate;
 }
 
 function leapChecker(year){
@@ -40,5 +70,4 @@ function leapChecker(year){
         month[1] = 28;
 
     }
-    console.log(year,month[1]);
 }
