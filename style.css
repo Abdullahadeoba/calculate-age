@@ -47,3 +47,15 @@ button{
     width: 30%;
     float: right;
 }
+.output-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.output-wrapper div{
+    height: 100px;
+    width: 100px;
+    background-color: #080808;
+    border-radius: 5px;
+    color: #ffffff;
+}
