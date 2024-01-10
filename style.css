@@ -82,7 +82,7 @@ p{
 }
 @media screen  and (max-width:475px){
     .container{
-        width: 300px;
+        width: 100%;
         height: 60%;
         border: none;
         place-items: center;
